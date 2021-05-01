@@ -1,0 +1,118 @@
+*
+{
+    padding:0;
+    margin:0;
+}
+/*text-image-header */
+#background-image
+{
+    min-height:100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#background-image div{
+    font-size:30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:transparent;
+    position: relative;
+    animation:text_reveal .5s ease-in forwards;
+    animation-delay:1.5s;
+}
+#background-image div::after
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    background-color:rgb(167, 159, 159);
+    animation:text_slider 1s ease-in;
+    animation-delay:1s;
+}
+@keyframes text_slider
+{
+    50%
+    {
+        width:100%;
+        left:0%;
+    }
+    100%
+    {
+     width:0%;
+     left:100%;
+    }
+}
+@keyframes text_reveal
+{
+100%
+{
+    color:black;
+}
+}
+#start-view
+{
+background-image: url(/Images/background.jpg);
+background-size: cover;
+background-position: top center;
+position: relative;
+}
+#background-image::after
+{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity:.5;
+}
+/* service section */
+#service 
+{
+    text-align: center;
+    width:100%;
+    margin:0 auto;
+    padding:100px 0;
+    background-color: black;
+   color:white;
+}
+#service .service-top .section-title
+{
+    font-size:3rem;
+    letter-spacing:.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#service .service-top p{
+    font-size:20px;
+    letter-spacing:.2rem;
+    margin-bottom:20px;
+    text-align: center;
+}
+#service .service-bottom
+{
+    display:grid;
+    text-align: center;
+    justify-content: center;
+    position:relative;
+    color: black;
+}
+#service .service-list
+{
+   display: flex;
+   align-items: flex-start;
+    background-image: url(./Images/img11.jpg);
+    background-size: cover;
+    padding:20px;
+    margin:20px;
+    border-radius:3px;
+    justify-content: center;
+    flex-direction: column; 
+}
+#service .service-list:hover
+{
+    opacity:.5;
+    transform: scale(1.1);
+}
