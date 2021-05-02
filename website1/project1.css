@@ -54,7 +54,7 @@
 }
 #start-view
 {
-background-image: url(/Images/background.jpg);
+background-image: url(./Images/background.jpg);
 background-size: cover;
 background-position: top center;
 position: relative;
